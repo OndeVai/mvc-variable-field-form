@@ -1,0 +1,38 @@
+﻿@model VariableListForm.ViewModels.ParentVM
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <a href="#" class="addNew">AddNew</a><br/>
+    @Html.EditorForModel()
+    <input type="submit" value="GO" />
+}
+
+
+<script>
+    $(function() {
+
+        $('.addNew').on('click', function (e) {
+            
+            e.preventDefault();
+
+            var $that = $(this);
+            $.ajax('@Url.Action("NewChild")').done(function(html) {
+                $('.children').append(html);
+                
+                var $form = $that.closest('form');
+                $form.removeData('validator')
+                     .removeData('unobtrusiveValidation');
+                $.validator.unobtrusive.parse($form);
+            });
+        });
+        
+        $('.remove').on('click', function(e) {
+            e.preventDefault();
+            $(this).parent('div').remove();
+        });
+    });
+</script>

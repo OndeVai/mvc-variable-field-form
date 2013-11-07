@@ -1,0 +1,6 @@
+﻿@model VariableListForm.ViewModels.ParentVM
+@Html.EditorFor(m => m.ParName)
+
+<div class="children">
+    @Html.EditorFor(m => m.ChildVms)
+</div>

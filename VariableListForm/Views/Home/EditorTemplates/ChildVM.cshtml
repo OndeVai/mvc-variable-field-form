@@ -1,0 +1,19 @@
+﻿@using VariableListForm._infra;
+@model VariableListForm.ViewModels.ChildVM
+@{
+    if (ViewContext.FormContext == null)
+    {
+        ViewContext.FormContext = new FormContext();
+    }
+}
+<div>
+    <hr />
+    @using (Html.BeginCollectionItem("ChildVms"))
+    {
+        
+        @Html.TextBoxFor(m => m.Name)<br />
+        @Html.TextBoxFor(m => m.Other)
+        <a href="#" class="remove">remove</a>
+    }
+
+</div>
