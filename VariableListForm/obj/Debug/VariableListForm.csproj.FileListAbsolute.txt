@@ -18,3 +18,4 @@ C:\_testing\mvc\VariableListForm\VariableListForm\bin\System.Web.WebPages.Deploy
 C:\_testing\mvc\VariableListForm\VariableListForm\bin\System.Web.WebPages.Razor.xml
 C:\_testing\mvc\VariableListForm\VariableListForm\obj\Debug\VariableListForm.dll
 C:\_testing\mvc\VariableListForm\VariableListForm\obj\Debug\VariableListForm.pdb
+C:\_testing\mvc\VariableListForm\VariableListForm\obj\Debug\VariableListForm.csprojResolveAssemblyReference.cache

@@ -11,8 +11,8 @@
     @using (Html.BeginCollectionItem("ChildVms"))
     {
         
-        @Html.TextBoxFor(m => m.Name)<br />
-        @Html.TextBoxFor(m => m.Other)
+        @Html.EditorFor(m => m.Name)<br />
+        @Html.EditorFor(m => m.Other)
         <a href="#" class="remove">remove</a>
     }
 

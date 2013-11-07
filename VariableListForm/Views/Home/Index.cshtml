@@ -30,7 +30,7 @@
             });
         });
         
-        $('.remove').on('click', function(e) {
+        $(document).on('click', '.remove', function(e) {
             e.preventDefault();
             $(this).parent('div').remove();
         });
